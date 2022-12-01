@@ -26,7 +26,7 @@ void PrintArray(int[] array)
 }
 
 int count = 0;
-int  EvenNumbers (int [] array) // Вывести количество четных чисел в консоль
+int  EvenNumbers (int [] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
