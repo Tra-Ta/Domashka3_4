@@ -26,28 +26,19 @@ void PrintArray(double[] array)
     Console.WriteLine("]");
 }
 
-double max = 0;
-double min = 0;
-
 double MaxNumbers(double[] array)
 {
-    max = array[0];
+    double max = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > max) max = array[i];
     }
     return max;
-    min = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] < min) min = array[i];
-    }
-    return min;
 }
 
 double MinNumbers(double[] array)
 {
-    min = array[0];
+    double min = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] < min) min = array[i];
@@ -57,8 +48,6 @@ double MinNumbers(double[] array)
 
 double[] arr = CreateArrayRndDouble(4, 1, 9);
 PrintArray(arr);
-MaxNumbers(arr);
-MinNumbers(arr);
-double result = max - min;
+double result = MaxNumbers(arr) - MinNumbers(arr);;
 result = Math.Round(result, 1);
 Console.WriteLine($"{result}");
